@@ -1,12 +1,9 @@
 package dev.andresfrank.movies.service;
 
-import dev.andresfrank.movies.MoviesApplication;
 import dev.andresfrank.movies.dto.MovieDTO;
 import dev.andresfrank.movies.model.Movie;
 import dev.andresfrank.movies.repository.MovieRepository;
-import org.bson.types.ObjectId;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +11,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class MovieService implements MovieServiceI {
+public class MovieService implements IMovieService {
     private ModelMapper modelMapper = new ModelMapper();
     private MovieRepository movieRepository;
 
